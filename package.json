@@ -24,6 +24,7 @@
   "dependencies": {
     "WNdb": "^3.1.2",
     "lapack": "^0.1.0",
+    "random-item": "^1.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "sentencer": "^0.1.5",

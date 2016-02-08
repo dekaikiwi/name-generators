@@ -1,8 +1,10 @@
 import React from "react";
 import Sentencer from "sentencer"
+
 var customNouns = require('json!./nouns.json');
 var customAdjectives = require('json!./adjectives.json');
 var customPatterns = require('json!./patterns.json');
+var randomItem = require('random-item');
 
 
 export default React.createClass({
@@ -29,11 +31,11 @@ export default React.createClass({
   },
   generateSentence: function () {
     var sentenceType = this.props.sentenceType;
-
-    this.setGenerator()
-    this.setState({sentence: Sentencer.make(customPatterns[sentenceType][0])})
+    var sentenceTemplate;
+    this.setGenerator();
+    sentenceTemplate = randomItem(customPatterns[sentenceType]);
+    this.setState({sentence: Sentencer.make(sentenceTemplate)});
   },
-  sentence: Sentencer.make("This sentence has {{ a_noun }} and {{ an_adjective }} {{ noun }} in it."),
   render: function() {
     return (
     <div class="wrapper">

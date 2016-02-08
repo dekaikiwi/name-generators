@@ -1,6 +1,7 @@
 {
   "finalAttacks": [
     "{{adjective}} {{noun}}",
-    "{{adjective}} {{adjective}} {{noun}}"
+    "{{adjective}} {{adjective}} {{noun}}",
+    "The {{adjective}} {{noun}}"
   ]
 }
